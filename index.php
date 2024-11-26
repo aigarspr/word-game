@@ -20,21 +20,19 @@
 <?php
 if (isset($_POST["submit"])) {
     $vards = filter_input(INPUT_POST, "vards", FILTER_SANITIZE_SPECIAL_CHARS,);
-
-
+    //pogas scripts
 
     echo "Vārds otrādāk rakstās:   ", strrev($vards), "<br>";
+    //apgrieztais
 
     echo "Burtu skaits:  ", strlen($vards), "<br>";
-
-
-
-
+    //counts
 
     if (strrev($vards) == $vards) {
         echo "Dotais vārds ir Palindroms";
     } else {
         echo "Dotais vārds nav Palindroms";
     }
+    //Palindroms
 }
 ?>
