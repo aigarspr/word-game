@@ -14,12 +14,13 @@
         <input type="text" name="vards" pattern="[a-zA-Z]*">
         <input type="submit" name="submit" value="Ievadīt!">
     </form>
+    <!--//form-->
 </body>
 
 </html>
 <?php
 if (isset($_POST["submit"])) {
-    $vards = filter_input(INPUT_POST, "vards", FILTER_SANITIZE_SPECIAL_CHARS,);
+    $vards = filter_input(INPUT_POST, "vards", FILTER_SANITIZE_SPECIAL_CHARS);
     //pogas scripts
 
     echo "Vārds otrādāk rakstās:   ", strrev($vards), "<br>";
